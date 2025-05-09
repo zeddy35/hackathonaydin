@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HackathOn Aydın</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=VT323&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/countdown@2.6.0/countdown.min.js"></script>
+</head>
+<main>
+    <canvas id="matrixCanvas" class="fixed top-0 left-0 w-full h-full z-0"></canvas>
+    <div class="cursor"></div>
+
+    <body class="bg-gray-900 text-white ">
+
+        <nav class="flex items-center justify-between p-6 navbar">
+            <div class="flex items-center space-x-4">
+              <img src="/images/Logo_2.png" alt="Logo" class="w-30 h-20">
+              <h1 class="text-3xl font-bold">Hackath<span class="blue">On</span> Aydın</h1>
+            </div>
+          
+            <div class="hidden md:flex space-x-6">
+              <a href="#about" class="transition duration-300 ease-in-out hover:text-purple-400">Hakkında</a>
+              <a href="#rewards " class="transition duration-300 ease-in-out hover:text-purple-400">Ödüller</a>
+              <a href="#location" class="transition duration-300 ease-in-out hover:text-purple-400">Konum</a>
+              <a href="#join" class="transition duration-300 ease-in-out hover:text-purple-400">Katıl</a>
+              <a href="#contact" class="transition duration-300 ease-in-out hover:text-purple-400">İletişim</a>
+            </div>
+          
+            <button id="menu-toggle" class="md:hidden text-white text-3xl focus:outline-none">☰</button>
+          </nav>
+          
+          <!-- Mobile Menu -->
+          <div id="mobile-menu" class="hidden flex flex-col space-y-4 p-6 bg-gray-800 text-white md:hidden">
+            <a href="#about">> HAKKINDA</a>
+            <a href="#rewards"># ÖDÜLLER</a>
+            <a href="#join">$ NASIL KATILIRIM</a>
+            <a href="#contact">$ İLETİŞİM</a>
+            <a href="#location">> KONUM</a>
+          </div>
+    
+
+    <!-- Hero Section -->
+    <section id="sponsors" class="py-16 my-10 bg-gray-800 bg-opacity-0 relative text-center z-10">
+        <h3 class="text-4xl font-bold green mb-8">Kulüplerimiz</h3>
+        <div class="flex justify-center items-center gap-12 mr-20">
+          <img src="/images/gdg.png" alt="Kulüp 1" class="w-60 h-auto">
+          <span class="text-6xl text-white">X</span> <!-- Huge X here -->
+          <img src="/images/teknof.png" alt="Kulüp 2" class="w-40 h-auto">
+        </div>
+      </section>
+      
+      
+      <section class="card-bg text-center py-24" style="max-width: 900px; margin: 50px auto;">
+        <h2 class="text-5xl font-bold mb-7">Çok yakında!</h2>
+        <p class="text-xl mb-8">Aydınlık Fikirler,Kodlayan Beyinler!</p>
+        <a href="https://linktr.ee/HackathOn_Aydin" class="bg-purple-600 px-6 py-3 mt-4 rounded-full button font-semibold hover:bg-purple-700">Hemen Katıl</a>
+    </section>
+
+
+    <!-- Countdown --> 
+     <div class="countdown-box countdown relative z-10">
+         <h1>> HACKATHON BAŞLANGICINA KALAN SÜRE:</h1>
+        <div id="countdown">Yükleniyor...</div>
+    </div>
+
+    <!-- About -->
+    <section id="about" class="section-card-about card-bg max-w-4xl mx-auto py-16 text-center">
+        <h3 class="text-4xl font-bold mb-6">> Hackath<span class="blue">On</span>_hakkında</h3>
+        <p class="blue text-xl">Aydın'ın İLK Hackathon'una hazır mısınız? 30 saat boyunca sınırsız yiyecek içecek, kod ve ödüller! En iyi ekibi bir araya getir ve yarışmayı kazan! Süreç boyunca eğlendiğinizden ve aralıksız kodladığınızdan emin olacağız!</p>
+    </section>        
+
+
+    <!-- Rewards -->
+    
+<div class="flex flex-wrap gap-8 max-w-6xl mx-auto px-4 py-12">
+    
+    <section id="rewards" class="section-card card-bg hero-background flex-1 min-w-[300px] bg-gray-900 p-6 rounded-xl" style="max-width: 895px; margin: 50px auto;">
+            <h3 class="text-4xl font-bold mb-6 text-center green "># ÖDÜL</h3>
+            <div class="card-bg bg-gray-800 p-3 rounded-xl text-center">
+                <h4 class="text-3xl font-bold mb-2">🥇 1. Takım</h4>
+                <p class="font-bold text-2xl"> Udemy 4000₺ Kredi</p>
+            </div>
+    </section>
+
+<!-- Sponsors -->
+    <section class="section-card card-bg flex-1 min-w-[300px] p-6 rounded-xl" style="max-width: 895px; margin: 50px auto;">
+        <h3 class="text-4xl font-bold text-center mb-8 green">$ SPONSORLAR</h3>
+        <div class="flex justify-center flex-wrap gap-10">
+            <img src="/images/unides.jpg" alt="Sponsor 1" class="sponsor-img">
+            <img src="/images/gsb.png" alt="Sponsor 2" class="sponsor-img">
+        </div>  
+    </section>
+
+    <!-- Location -->
+    <section id="location" class="card-bg section-card lex-1 min-w-[300px] p-6 rounded-xl">
+        <h3 class="text-4xl font-bold text-center mb-8 green">> Konum </h3>
+        <div style="background:#0f0f0f; padding:20px; border-radius:20px; max-width: 800px; margin: 50px auto;">
+            <h2 style="color:#00ff00; font-family:'VT323', monospace; text-align: center;">>>Hackathon Lokasyonu</h2>
+            <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3150.27252498085!2d27.852352532850805!3d37.8539133150833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14b92b74a5805367%3A0x301ac43c828de963!2sAdnan%20Menderes%20%C3%9Cniversitesi%20Kongre%20Merkezi!5e0!3m2!1str!2str!4v1746811389211!5m2!1str!2str" 
+            width="100%" 
+            height="450" 
+            style="border:0; border-radius: 20px;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>          
+    </section>
+    
+    <!-- S.S.S -->
+    <section id="faq" class="section-card card-bg hero-background w-895  ml-4 py-16 px-6 text-center">
+        <h3 class="text-4xl font-bold text-center mb-6">? S.S.S</h3>
+      
+        <div class="space-y-4">
+          <div class="faq-item bg-gray-800 p-4 rounded-xl cursor-pointer">
+            <div class="flex items-center justify-center gap-4">
+              <h4 class="text-2xl font-bold text-white">Hackathon nedir?</h4>
+              <span class="green text-3xl toggle-icon">+</span>
+            </div>
+            <p class="text-gray-300 hidden mt-4 transition-all duration-300 green opacity-0">Hackathon, sınırlı sürede ekiplerin bir araya gelip yazılım, donanım veya proje geliştirdiği yarışma/etkinliktir. Hem eğlen, hem üret, hem ödül kazan!</p>
+          </div>
+      
+          <div class="faq-item bg-gray-800 p-4 rounded-xl cursor-pointer">
+            <div class="flex items-center justify-center gap-4">
+              <h4 class="text-2xl font-bold text-white">Katılım ücretli mi?</h4>
+              <span class="green text-3xl toggle-icon">+</span>
+            </div>
+            <p class="text-gray-300 hidden mt-4 transition-all duration-300 green opacity-0">Hayır, etkinliğimiz tamamen ücretsizdir. Yeter ki başvurunu yap ve bizimle ol!</p>
+          </div>
+      
+          <div class="faq-item bg-gray-800 p-4 rounded-xl cursor-pointer">
+            <div class="flex items-center justify-center gap-4">
+              <h4 class="text-2xl font-bold text-white">Takımım yoksa katılabilir miyim?</h4>
+              <span class="green text-3xl toggle-icon">+</span>
+            </div>
+            <p class="text-gray-300 hidden mt-4 transition-all duration-300 green opacity-0">Elbette! Etkinlik günü takım oluşturabileceğin eşleşme alanımız olacak. Tek başına gel, takımını burada bul.</p>
+          </div>
+        </div>
+      </section>
+      
+      
+      
+</div>    
+    
+    <!-- Join Button -->
+    <section id="join" class="relative text-center py-16 z-10">
+        <h3 class="text-3xl font-bold mb-4">Sen de ekibini topla!</h3>
+        <a href="https://linktr.ee/HackathOn_Aydin" class="bg-purple-600 px-6 py-3 rounded-full font-semibold hover:bg-purple-700"> join_hackathon.sh </a>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="relative soft-text footer text-center p-6 bg-gray-800 z-10">
+        <p>&copy; 2025 HackathOn Aydın. Tüm Hakları Saklıdır.</p>
+    </footer>
+
+    <script>
+
+const faqItems = document.querySelectorAll(".faq-item");
+
+faqItems.forEach(item => {
+  item.addEventListener("click", () => {
+    const p = item.querySelector("p");
+    const icon = item.querySelector(".toggle-icon");
+
+    if (p.classList.contains("hidden")) {
+      p.classList.remove("hidden");
+      setTimeout(() => {
+        p.classList.add("opacity-100");
+        p.classList.remove("opacity-0");
+      }, 10);
+      icon.textContent = "−";
+    } else {
+      p.classList.add("opacity-0");
+      setTimeout(() => {
+        p.classList.add("hidden");
+        p.classList.remove("opacity-100");
+      }, 300);
+      icon.textContent = "+";
+    }
+  });
+});
+
+
+        
+const targetDate = new Date("2025-05-12T11:00:00");
+
+function updateCountdown() {
+  const now = new Date();
+  let totalSeconds = Math.floor((targetDate - now) / 1000);
+
+  if (totalSeconds < 0) {
+    document.getElementById("countdown").textContent = ">> BAŞLADI!";
+    clearInterval(timer);
+    return;
+  }
+
+  const days = Math.floor(totalSeconds / 86400);
+  totalSeconds %= 86400;
+
+  const hours = Math.floor(totalSeconds / 3600);
+  totalSeconds %= 3600;
+
+  const minutes = Math.floor(totalSeconds / 60);
+  const seconds = totalSeconds % 60;
+
+  document.getElementById("countdown").textContent =
+    `${days} gün ${hours} saat ${minutes} dakika ${seconds} saniye <`;
+}
+
+const timer = setInterval(updateCountdown, 1000);
+updateCountdown();
+
+
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        });
+
+        document.addEventListener("mousemove", e => {
+    const trail = document.createElement("div");
+    trail.className = "trail";
+    trail.style.left = e.clientX + "px";
+    trail.style.top = e.clientY + "px";
+    document.body.appendChild(trail);
+
+    setTimeout(() => {
+      trail.remove();
+    }, 700);
+  });
+
+  const canvas = document.getElementById("matrixCanvas");
+const ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+const letters = "01";
+const fontSize = 16;
+const columns = canvas.width / fontSize;
+const drops = Array(Math.floor(columns)).fill(1);
+
+function drawMatrix() {
+  ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+  ctx.fillStyle = "#00FF00";
+  ctx.font = fontSize + "px monospace";
+
+  for (let i = 0; i < drops.length; i++) {
+    const text = letters.charAt(Math.floor(Math.random() * letters.length));
+    ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+    if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+      drops[i] = 0;
+    }
+    drops[i]++;
+  }
+}
+
+setInterval(drawMatrix, 33);
+
+window.addEventListener("resize", () => {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+});
+
+    </script>
+</main>
+</body>
+</html>
