@@ -1,16 +1,18 @@
-import express from "express";
-import bodyParser from "body-parser";
-
+const express = require('express');
+const path = require('path');
 const app = express();
-const port = 3000;
 
+// EJS'i kullanmak için view engine olarak ayarla
 app.set('view engine', 'ejs');
-app.use(express.static('public'));
+app.set('views', path.join(__dirname, 'views'));  // views klasörünü doğru ayarla
 
-app.get("/", (req, res) => {
-    res.render("index.ejs");
+// Ana sayfa route'u
+app.get('/', (req, res) => {
+  res.render('index'); // index.ejs dosyasını render et
 });
 
-app.listen(port, () => {
-    console.log(`This server is running on port : ${port}`);
+// Sunucu başlatma
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
